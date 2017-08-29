@@ -1,7 +1,7 @@
 {
-	"name": "web-starter",
+	"name": "bouncy-landing-page",
 	"version": "0.0.1",
-	"description": "start template for markup",
+	"description": "landin page from psd",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
