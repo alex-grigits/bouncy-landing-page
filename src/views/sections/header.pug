@@ -1,7 +1,8 @@
-header.main-head(style="background-image: url(../img/header-bg.jpg)")
+header.header(style="background-image: url(../img/header-bg.jpg)")
 	.container
 		.top-line
-			span.logo Bouncy
+			a.logo(href="##")
+				span.logo__text Bouncy
 			ul.nav-top
 				each item in menu
 					if item['active']
@@ -10,6 +11,8 @@ header.main-head(style="background-image: url(../img/header-bg.jpg)")
 					else
 						li.nav-top__item
 							a.nav-top__link(href=item.link)= item.name
+		h1.header__title We Are Code Cafe
+		p.header__desc At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
 
 
 

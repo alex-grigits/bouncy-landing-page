@@ -45,14 +45,15 @@ gulp.task('sass', () => {
 		.pipe(reload({stream : true}));
 });
 
-gulp.task('pug', () => {
+//==== TODO task for recieve data from content.json without restart gupl
 
+gulp.task('pug', () => {
+	var locals;
 	gulp.src('src/views/*.pug')
 		.pipe(plumber())
-		// .pipe(data(function(file) {
+		// .pipe(data(function() {
 		// 	return JSON.parse(fs.readFileSync('./content.json', 'utf8'));
-		// 	}
-		// ))
+		// }))
 		.pipe(pug({
 			locals: JSON.parse(fs.readFileSync('./content.json', 'utf8')),
 			pretty: '	'
@@ -95,7 +96,7 @@ gulp.task('removedist', function() { return del.sync('dist'); });
 
 gulp.task('watch', () => {
 	gulp.watch('src/**/*.pug', ['pug']);
-	gulp.watch('./content.json', ['pug']);
+
 	gulp.watch('src/**/*.+(scss|sass)', ['sass']);
 });
 

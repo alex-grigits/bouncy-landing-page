@@ -1,4 +1,4 @@
-.main-head
+.header
 	min-height: 737px
 	padding-top: 40px
 	position: relative
@@ -11,28 +11,40 @@
 		z-index: -1
 		background-color: #202224
 		opacity: .5
-	.top-line
-		height: 1.78rem
-		line-height: 1.78rem
-		.logo
-			float: left
-			padding-top: 7px
-			font-size: 1.78rem
-			font-family: $font-logo
-			color: $color-white
-		.nav-top
-			float: right
-			.nav-top__item
-				line-height: 1.78rem
-				display: inline-block
-				padding: 5px 22px 3px
-				&.active
-					border: 1px solid $color-white
-					border-radius: 43px
-			.nav-top__link
-				text-decoration: none
-				color: $color-white
-				font-size: 1.14rem
+.top-line
+	height: 35px
+	line-height: 35px
+	.logo
+		float: left
+		cursor: pointer
+		text-decoration: none
+	.logo__text
+		padding-top: 7px
+		font-size: 1.78rem
+		font-family: $font-logo
+		color: $color-white
+	.nav-top
+		float: right
+	.nav-top__item
+		line-height: 1rem
+		display: inline-block
+		padding: 9px 22px 7px
+		&.active
+			border: 1px solid $color-white
+			border-radius: 43px
+	.nav-top__link
+		text-decoration: none
+		color: $color-white
+		font-size: 1.14rem
 
+
+.header__title
+	text-align: center
+	padding: 220px 0 43px
+
+.header__desc
+	color: $color-white
+	font-size: 1.15rem
+	text-align: center
 
 
