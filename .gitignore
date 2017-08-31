@@ -4,7 +4,7 @@ node_modules/
 psd/
 
 # Build directory
-dist/
+
 
 # Other files
 project.lock.json
