@@ -1,0 +1,16 @@
+header.main-head(style="background-image: url(../img/header-bg.jpg)")
+	.container
+		.top-line
+			span.logo Bouncy
+			ul.nav-top
+				each item in menu
+					if item['active']
+						li.nav-top__item.active
+							a.nav-top__link(href=item.link)= item.name
+					else
+						li.nav-top__item
+							a.nav-top__link(href=item.link)= item.name
+
+
+
+

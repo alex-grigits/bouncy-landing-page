@@ -1,0 +1,39 @@
+{
+	"menu": [
+		{
+			"name": "Hello",
+			"link": "#",
+			"active": false
+		},
+		{
+			"name": "About",
+			"link": "#",
+			"active": true
+		},
+		{
+			"name": "Services",
+			"link": "#",
+			"active": false
+		},
+		{
+			"name": "Portfolio",
+			"link": "#",
+			"active": false
+		},
+		{
+			"name": "Team",
+			"link": "#",
+			"active": false
+		},
+		{
+			"name": "Blog",
+			"link": "#",
+			"active": true
+		},
+		{
+			"name": "Contact",
+			"link": "#",
+			"active": true
+		}
+	]
+}

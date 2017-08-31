@@ -11,7 +11,8 @@ const gulp = require('gulp'),
 	csso = require('gulp-csso'),
 	autoprefixer = require('gulp-autoprefixer'),
 	cssunit = require('gulp-css-unit'),
-	del = require('del');
+	del = require('del'),
+	data = require('gulp-data');
 
 // server
 gulp.task('server', function() {
@@ -34,10 +35,10 @@ gulp.task('sass', () => {
 			browsers : ['> 5%'],
 			cascade : false
 		}))
-		.pipe(cssunit({
-			type     :    'px-to-rem',
-			rootSize  :    16
-		}))
+		// .pipe(cssunit({
+		// 	type: 'px-to-rem',
+		// 	rootSize: 16
+		// }))
 		.pipe(csso())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('./dist/css/'))
@@ -45,16 +46,33 @@ gulp.task('sass', () => {
 });
 
 gulp.task('pug', () => {
-	// let locals = require('./content.json');
 
-	gulp.src('src/views/index.pug')
+	gulp.src('src/views/*.pug')
 		.pipe(plumber())
+		// .pipe(data(function(file) {
+		// 	return JSON.parse(fs.readFileSync('./content.json', 'utf8'));
+		// 	}
+		// ))
 		.pipe(pug({
-			// locals : locals
-			pretty: true,
+			locals: JSON.parse(fs.readFileSync('./content.json', 'utf8')),
+			pretty: '	'
 		}))
 		.pipe(gulp.dest('dist'))
 		.pipe(reload({stream : true}));
+});
+
+
+//copy fonts to dist
+gulp.task('fontsBuild', ['removedist'], function() {
+	return gulp.src('src/fonts/*/**')
+		.pipe(gulp.dest('dist/fonts/'));
+});
+
+//copy images to outputDir
+gulp.task('imgBuild', ['removedist'], function() {
+	return gulp.src('src/img/**/*.*')
+		//.pipe(imagemin())
+		.pipe(gulp.dest('dist/img/'));
 });
 
 gulp.task('sprite', function () {
@@ -72,13 +90,15 @@ gulp.task('sprite', function () {
 	spriteData.css.pipe(gulp.dest('./src/styles/sprite'));
 });
 
+// task for clean dist folder before start watch
 gulp.task('removedist', function() { return del.sync('dist'); });
 
 gulp.task('watch', () => {
 	gulp.watch('src/**/*.pug', ['pug']);
+	gulp.watch('./content.json', ['pug']);
 	gulp.watch('src/**/*.+(scss|sass)', ['sass']);
 });
 
 gulp.task('default',
-	['removedist', 'sass', 'pug', 'sprite', 'server', 'watch']
+	['removedist', 'fontsBuild', 'imgBuild', 'sass', 'pug', 'sprite', 'server', 'watch']
 );
