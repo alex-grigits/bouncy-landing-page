@@ -26,7 +26,7 @@ gulp.task('server', function() {
 });
 
 gulp.task('sass', () => {
-	return gulp.src('./src/sass/main.+(scss|sass)')
+	return gulp.src('./src/blocks/main.+(scss|sass)')
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(sassGlob())
@@ -49,7 +49,7 @@ gulp.task('sass', () => {
 
 gulp.task('pug', () => {
 	var locals;
-	gulp.src('src/views/*.pug')
+	gulp.src('src/blocks/*.pug')
 		.pipe(plumber())
 		// .pipe(data(function() {
 		// 	return JSON.parse(fs.readFileSync('./content.json', 'utf8'));
@@ -88,7 +88,7 @@ gulp.task('sprite', function () {
 	}));
 
 	spriteData.img.pipe(gulp.dest('./dist/img'));
-	spriteData.css.pipe(gulp.dest('./src/styles/sprite'));
+	// spriteData.css.pipe(gulp.dest('./src/styles/sprite'));
 });
 
 // task for clean dist folder before start watch

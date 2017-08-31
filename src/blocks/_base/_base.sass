@@ -1,12 +1,17 @@
+@import grid
+
 html
 	font-size: 14px
 
-body
+.page
 	font-family: $font-main
 	color: $color-steel
-	min-width: 320px
-	position: relative
-	line-height: 1.75rem
+	.wrapper
+		min-width: 320px
+		max-width: 1366px
+		margin: 0 auto
+		position: relative
+		line-height: 1.75rem
 
 *
 	box-sizing: border-box
@@ -46,5 +51,4 @@ b, strong
 
 // Common classes
 .container
-	max-width: 1170px
-	margin: 0 auto
+	+container()
