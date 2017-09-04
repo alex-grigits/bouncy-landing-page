@@ -13,24 +13,24 @@ $gutter: 40px
 // $col: 5.2%
 
 %container
-  margin: 0 auto
-  box-sizing: border-box
-  display: flex
-  @media #{$xxs}
-    width: 100%
-    padding: 0 15px
-  @media #{$sm}
-    width: 750px
-  @media #{$md}
-    width: 970px
-  @media #{$lg}
-    width: 1170px
+	margin: 0 auto
+	box-sizing: border-box
+	display: flex
+	@media #{$xxs}
+		width: 100%
+		padding: 0 15px
+	@media #{$sm}
+		width: 750px
+	@media #{$md}
+		width: 970px
+	@media #{$lg}
+		width: 1170px
 
 
 =container($align:space-between, $wrap:wrap)
-  @extend %container
-  justify-content: $align
-  flex-wrap: $wrap
+	@extend %container
+	justify-content: $align
+	flex-wrap: $wrap
 
 =col($num)
-  width: calc( (((100% - (#{$gutter} * (#{$cols} - 1))) / #{$cols}) * #{$num}) + ( #{$gutter} * (#{$num} - 1)) )
+	width: calc( (((100% - (#{$gutter} * (#{$cols} - 1))) / #{$cols}) * #{$num}) + ( #{$gutter} * (#{$num} - 1)) )

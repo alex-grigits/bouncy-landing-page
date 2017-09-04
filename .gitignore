@@ -1,11 +1,4 @@
-# Dependency directories
-node_modules/
 .vscode/
-psd/
-
-# Build directory
-
-
-# Other files
-project.lock.json
-.sass-lint.yml
+node_modules/
+*.log
+dist/

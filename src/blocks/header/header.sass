@@ -1,0 +1,30 @@
+@import "../_base/_vars.sass";
+@import "../_base/_grid.sass";
+
+// b.header
+
+.header
+	padding: 39px 0
+	&__container
+		+container(space-beetw)
+	&__logo
+		+col(3)
+	&__nav
+		+col(9)
+
+// b.header-nav
+
+.nav
+	+container(flex-end)
+	border: 1px solid green
+	&__link
+		font-size: 16px
+		line-height: 33px
+		color: $color-white
+	&__item
+		border: 1px solid red
+		display: inline-block
+		margin-left: 44px
+
+
+

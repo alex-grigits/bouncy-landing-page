@@ -1,13 +1,49 @@
+include _assets/bemto
+- set_bemto_settings({ modifier: "--" })
+
+include head/head
+include header/header
+
 doctype html
-html(lang='en')
-	head
-		meta(charset='UTF-8')
-		meta(name='viewport', content='width=device-width, initial-scale=1.0')
-		meta(http-equiv='X-UA-Compatible', content='ie=edge')
-		link(rel="stylesheet", href="css/main.css")
-		title Document
-		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
-	body.page
-		.wrapper
-			include header/header
-			include this-is/this-is
+html
+
+	+head({
+		"title": "Bouncy",
+		"author": "Alex Grigits",
+		"description": "Bouncy Landing Page"
+	})
+
+	+b.BODY.page
+		+e.wrap
+			+header({
+				"menu": [
+					{
+						"text": "Hello",
+						"href": "index.html"
+					},
+					{
+						"text": "About",
+						"href": "index.html"
+					},
+					{
+						"text": "Services",
+						"href": "index.html"
+					},
+					{
+						"text": "Portfolio",
+						"href": "index.html"
+					},
+					{
+						"text": "Team",
+						"href": "index.html"
+					},
+					{
+						"text": "Blog",
+						"href": "index.html"
+					},
+					{
+						"text": "Contact",
+						"href": "index.html"
+					}
+				]
+			})

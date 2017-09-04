@@ -1,13 +1,12 @@
-include ../top-line/top-line
+mixin header(data)
+	+b.HEADER.header
+		+e.container
+			+e.logo
+				+b.A.logo(href='#')
+					+e.SPAN.text Bouncy
 
-header.header(style="background-image: url(../img/header-bg.jpg)")
-	+top-line()
-	.header__container
-		h1.header__title We Are Code Cafe
-		p.header__desc At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-		.header-down
-			button.down-arrow
-				i.fa.fa-angle-down
-
-
+			+b.NAV.nav.header__nav
+				each item in data.menu
+					+e.item
+						+e.A.link(href=item.href)= item.text
 
