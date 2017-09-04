@@ -2,12 +2,14 @@ include ../top-line/top-line
 
 header.header(style="background-image: url(../img/header-bg.jpg)")
 	+top-line()
-	.header__container
-		h1.header__title We Are Code Cafe
-		p.header__desc At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-		.header-down
-			button.down-arrow
-				i.fa.fa-angle-down
-
-
+	//- .header__container
+	//- 	h1.header__title We Are Code Cafe
+	//- 	p.header__desc At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+	//- 	.header-down
+	//- 		button.down-arrow
+	//- 			i.fa.fa-angle-down
+	+b.header
+		+e.container
+			+e.H1.title We Are Code Cafe
+			+e.P.desc At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
 

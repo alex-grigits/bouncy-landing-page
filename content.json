@@ -3,12 +3,12 @@
 		{
 			"name": "Hello",
 			"link": "#",
-			"active": false
+			"active": true
 		},
 		{
 			"name": "About",
 			"link": "#",
-			"active": true
+			"active": false
 		},
 		{
 			"name": "Services",
@@ -28,12 +28,12 @@
 		{
 			"name": "Blog",
 			"link": "#",
-			"active": true
+			"active": false
 		},
 		{
 			"name": "Contact",
 			"link": "#",
-			"active": true
+			"active": false
 		}
 	]
 }
