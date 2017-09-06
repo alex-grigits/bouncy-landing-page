@@ -4,21 +4,15 @@
 @import "./_base/base"
 @import "./_base/grid"
 
-// Grid
-@import 'susy'
-@import 'plugins/svg-grid'
-
-$susy: ('svg-grid-colors': hsl(180, 50%, 80%), 'columns': susy-repeat(12), 'gutters': 0.25, 'spread': "narrow", 'container-spread': 'narrow',)
-
-
 // Sections
 @import "./header/header"
-@import "./top-line/top-line"
+@import "./top-menu/top-menu"
 @import "./this-is/this-is"
+@import "./about/about"
 
-.page
-	max-width: 1170px
+*
+	box-sizing: border-box
+
+.page__wrapper
+	max-width: 1366px
 	margin: 0 auto
-	&__wrapper
-		@include container
-		background: susy-svg-grid() no-repeat scroll

@@ -1,15 +1,25 @@
-include ../top-line/top-line
+include ../top-menu/top-menu
 
-header.header(style="background-image: url(../img/header-bg.jpg)")
-	+top-line()
-	//- .header__container
-	//- 	h1.header__title We Are Code Cafe
-	//- 	p.header__desc At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-	//- 	.header-down
-	//- 		button.down-arrow
-	//- 			i.fa.fa-angle-down
-	+b.header
-		+e.container
-			+e.H1.title We Are Code Cafe
-			+e.P.desc At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
++b.HEADER.header(style="background-image: url(../img/header-bg.jpg)")
+	+e.top-line
+		+b.logo.header__logo
+			+e.SPAN.text Bouncy
+		+top-menu({
+			"menu": [
+				{ "name": "Hello", "src": "#", "active": true },
+				{ "name": "About", "src": "#", "active": false },
+				{ "name": "Services", "src": "#", "active": false },
+				{ "name": "Portfolio", "src": "#", "active": false },
+				{ "name": "Team", "src": "#", "active": false },
+				{ "name": "Blog", "src": "#", "active": false },
+				{ "name": "Contact", "src": "#", "active": false }
+			]
+		})
 
+	+b.hero.header__hero
+		+e.H1.title We Are Code Cafe
+		+e.P.desc
+			| At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+			</br> praesentium voluptatum
+	+b.BUTTON.down-arrow.header__down-arrow
+		i.fa.fa-chevron-down

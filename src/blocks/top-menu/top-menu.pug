@@ -1,0 +1,7 @@
+mixin top-menu(data)
+	+b.NAV.top-menu.header__menu
+		each item in data.menu
+			if(item.active)
+				+e.A.item.--active(href=item.src)= item.name
+			else
+				+e.A.item(href=item.src)= item.name

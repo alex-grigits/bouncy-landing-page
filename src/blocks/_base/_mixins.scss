@@ -42,3 +42,16 @@
 		src: $src;
 	}
 }
+
+// =============================================================================
+// Buttons
+// =============================================================================
+@mixin btn-icon($size, $color) {
+	width: $size;
+	height: $size;
+	background-color: $color;
+	border: none;
+	border-radius: 50%;
+	color: $color-white;
+	padding: 12px;
+}

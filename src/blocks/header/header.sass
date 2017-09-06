@@ -1,0 +1,42 @@
+.header
+	height: 737px
+	background-repeat: no-repeat
+	background-size: cover
+
+.header__top-line
+	+container()
+	align-items: center
+	height: 110px
+
+.logo
+	line-height: 25px
+	font-size: 25px
+	font-family: BigJohn
+	color: $color-white
+
+// .header__menu
+// 	width: 550px
+
+.header__hero
+	padding-top: 175px
+
+.hero
+	+container()
+	display: flex
+	flex-flow: column wrap
+	&__title
+		align-self: center
+		margin-bottom: 30px
+	&__desc
+		font-size: 16px
+		text-align: center
+		color: $color-white
+		line-height: 28px
+		letter-spacing: .8px
+
+.down-arrow
+	+btn-icon(36px, $color-topaz)
+
+.header__down-arrow
+	+container()
+	margin-top: 220px
