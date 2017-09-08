@@ -20,7 +20,7 @@ gulp.task('server', function() {
 		open: true,
 		notify: false,
 		server: {
-			baseDir: "./docs",
+			baseDir: "./dist",
 		}
 	});
 });
@@ -44,7 +44,7 @@ gulp.task('sass', () => {
 		// }))
 		.pipe(csso())
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('./docs/css/'))
+		.pipe(gulp.dest('./dist/css/'))
 		.pipe(reload({stream : true}));
 });
 
@@ -61,7 +61,7 @@ gulp.task('pug', () => {
 			locals: JSON.parse(fs.readFileSync('./content.json', 'utf8')),
 			pretty: '	'
 		}))
-		.pipe(gulp.dest('docs'))
+		.pipe(gulp.dest('dist'))
 		.pipe(reload({stream : true}));
 });
 
@@ -69,14 +69,14 @@ gulp.task('pug', () => {
 //copy fonts to dist
 gulp.task('fontsBuild', ['removedist'], function() {
 	return gulp.src('src/fonts/*/**')
-		.pipe(gulp.dest('docs/fonts/'));
+		.pipe(gulp.dest('dist/fonts/'));
 });
 
 //copy images to outputDir
 gulp.task('imgBuild', ['removedist'], function() {
 	return gulp.src('src/img/**/*.*')
 		//.pipe(imagemin())
-		.pipe(gulp.dest('docs/img/'));
+		.pipe(gulp.dest('dist/img/'));
 });
 
 gulp.task('sprite', function () {
@@ -90,12 +90,12 @@ gulp.task('sprite', function () {
 		padding: 70
 	}));
 
-	spriteData.img.pipe(gulp.dest('./docs/img'));
+	spriteData.img.pipe(gulp.dest('./dist/img'));
 	// spriteData.css.pipe(gulp.dest('./src/styles/sprite'));
 });
 
 // task for clean dist folder before start watch
-gulp.task('removedist', function() { return del.sync('docs'); });
+gulp.task('removedist', function() { return del.sync('dist'); });
 
 gulp.task('watch', () => {
 	gulp.watch('src/**/*.pug', ['pug']);

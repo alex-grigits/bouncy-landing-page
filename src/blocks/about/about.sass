@@ -2,27 +2,48 @@
 	background-color: $color-gray-bg
 
 .about__container
-	+container(center)
+	+container()
+	flex-direction: column
+	align-items: center
 	padding: 80px 0
 
 .about__title
-	+col(12)
 	text-align: center
 
 .about__desc
-	+col(12)
+	display: inline-block
+	width: 460px
 	text-align: center
-	margin: 30px auto 55px
+	margin: 30px auto 50px
+
+.about-icons
+	display: flex
+	justify-content: space-between
+	width: 215px
+	margin-bottom: 60px
 
 .icon--steel
 	+btn-icon(53px, $color-steel)
-	&__img
-		padding: 17px 0
 
 .icon--topaz
 	+btn-icon(53px, $color-topaz)
-	&__img
-		padding: 17px 0
 
-.about__icon
-	margin: 0 14px
+.about__text
+	margin: 0 70px
+
+.text-about__title
+	color: $color-greyish-brown
+	padding-bottom: 30px
+
+.ideas
+	display: flex
+
+.ideas__col
+	font-size: 1.15rem
+
+.text-about__col--left
+	flex: 2 1 0
+	padding-right: 70px
+
+.text-about__col--right
+	flex: 3 1 0
