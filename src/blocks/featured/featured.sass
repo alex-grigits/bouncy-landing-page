@@ -1,0 +1,90 @@
+.featured
+	display: flex
+	flex-direction: column
+	padding-top: 80px
+
+.featured__title
+	text-align: center
+
+.featured__subtitle
+	display: inline-block
+	width: 460px
+	text-align: center
+	margin: 30px auto 55px
+
+.featured-works
+	display: flex
+	flex-flow: row nowrap
+	height: 330px
+
+.featured-works__item-img
+	flex: 1 1 calc(33.33%)
+	overflow: hidden
+	position: relative
+	&:nth-child(1)
+		flex: 2 1 calc(70%)
+
+.featured-works__overlay
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: #162e2b
+	opacity: .85
+
+.featured-works__text
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	font-family: $font-heading
+	font-weight: 300
+	font-size: 20px;
+	color: white;
+	text-transform: uppercase
+
+.featured-works__item-img:hover .featured-works__overlay
+	transition: opacity .5s ease
+	opacity: 0
+
+.fold-footer
+	position: relative
+	background: url("../../img/featured/fold-footer-bg.jpg") no-repeat
+	background-position-y: center
+	&__container
+		width: 1030px
+		margin: 0 auto
+		display: flex
+		flex-flow: row nowrap
+		justify-content: space-between
+		align-items: center
+		height: 115px
+	&__text
+		font-size: 20px
+		color: $color-white
+		z-index: 5
+	&__submit
+		background-color: transparent
+		padding: 10px 30px
+		border: 1px solid $color-white
+		border-radius: 37px
+		cursor: pointer
+		font-size: 16px
+		font-family: $font-main
+		font-weight: 300
+		color: $color-white
+		line-height: 16px
+		z-index: 4
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: $color-topaz
+		opacity: .75
+		z-index: 1
+
