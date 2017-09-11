@@ -1,0 +1,156 @@
+.services
+	background-color: #f3f3f3
+	&__container
+		display: flex
+		flex-flow: column nowrap
+		align-items: center
+		width: 1170px
+		margin: 0 auto
+		padding: 80px 70px 140px
+	&__subtitle
+		text-align: center
+		width: 460px
+		margin: 30px auto 55px
+	&__wrap
+		display: flex
+		flex-flow: row nowrap
+		justify-content: space-between
+
+.menu
+	display: flex
+	flex-flow: column nowrap
+	justify-content: space-between
+	&__icon
+		+btn-icon(53px, $color-steel)
+	&__icon:not(:last-child)
+		margin-bottom: 15px
+	&__icon--active
+		background-color: $color-topaz
+
+// services-desc
+.services-desc
+	flex-basis: 400px
+	&__title
+		margin-bottom: 33px
+	&__text:not(:last-child)
+		margin-bottom: 33px
+
+// progress-bar
+.skills
+	display: flex
+	flex-flow: row nowrap
+	justify-content: space-between
+	flex-basis: 460px
+	align-items: center
+
+.skill
+	position: relative
+	height: 170px
+
+/** function circular-progress
+	**------------------------------------------*/
+@function circular-progress($maxPercent, $percent, $color-bar, $color-back)
+	$increment: 360 / $maxPercent
+	$half: round($maxPercent / 2)
+	$background-image: ''
+
+	@if $percent < $half
+		$nextdeg: 90deg +  ($increment * $percent)
+
+		$background-image: 'linear-gradient(90deg, #{$color-back} 50%, transparent 50%, transparent), linear-gradient(#{$nextdeg}, #{$color-bar} 50%, #{$color-back} 50%, #{$color-back})'
+
+	@else
+		$nextdeg: -90deg + ($increment * ($percent - $half))
+		$background-image: 'linear-gradient(#{$nextdeg}, #{$color-bar} 50%, transparent 50%, transparent), linear-gradient(270deg, #{$color-bar} 50%, #{$color-back} 50%, #{$color-back})'
+	@return unquote($background-image);
+
+
+/** circular-progress styles
+	**------------------------------------------*/
+$percent-to-show: 25 // value to show in the circular progress CHANGE ME
+
+// .circular-progress
+.skill__circular-progress
+	border-radius: 50%
+	height: 123px
+	position: relative
+	width: 123px
+	transition: all .3s linear
+	&:before
+		background-color: #f3f3f3
+		border-radius: 50%
+		color: #81868e
+		// content: '#{$percent-to-show}%'
+		font-size: 25px
+		font-weight: 300
+		height: 100%
+		left: 0
+		line-height: 125px
+		position: absolute
+		text-align: center
+		top: 0
+		transform: scale(.93)
+		width: 100%
+
+.skill__brand-80
+	background: circular-progress(100, 80, #19bd9a, #147c80)
+	&:before
+		content: '80%'
+
+.skill__web-75
+	background: circular-progress(100, 75, #19bd9a, #147c80)
+	&:before
+		content: '75%'
+
+.skill__ui-60
+	background: circular-progress(100, 60, #19bd9a, #147c80)
+	&:before
+		content: '60%'
+
+.skill__text
+	width: 100%
+	position: absolute
+	top: 145px
+	text-align: center
+
+
+// Impressed section
+.impressed
+	background: url('../../img/services/services-bg.jpg') no-repeat
+	min-height: 392px
+	position: relative
+	padding: 75px 100px 95px
+	&__container
+		max-width: 600px
+	&__title
+		margin-bottom: 55px
+		color: $color-white
+	&__text
+		margin-bottom: 25px
+		font-size: 16px
+		font-weight: 300
+		font-family: $font-main
+		color: $color-silver
+		line-height: 28px
+	&__author
+		font-family: $font-bold
+		font-size: 16px
+		text-transform: uppercase
+	&__author-post
+		font-size: 16px
+		text-transform: uppercase
+	&__picture
+		position: absolute
+		display: flex
+		justify-content: center
+		right: 97px
+		top: -38px
+	&__monitor-text
+		position: absolute
+		margin-top: 30%
+		font-size: 30px
+		font-family: $font-logo
+		color: #cccccc
+		text-transform: uppercase
+
+

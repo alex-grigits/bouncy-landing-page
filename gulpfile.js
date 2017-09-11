@@ -31,12 +31,11 @@ gulp.task('sass', () => {
 		.pipe(sourcemaps.init())
 		.pipe(sassGlob())
 		.pipe(sass({
-			outputStyle: 'compressed',
-			includePaths: ['node_modules/susy/sass']
+			outputStyle: 'compressed'
 		}).on('error', sass.logError))
 		.pipe(autoprefixer({
 			browsers : ['> 5%'],
-			cascade : false
+			cascade : true
 		}))
 		// .pipe(cssunit({
 		// 	type: 'px-to-rem',
@@ -48,7 +47,7 @@ gulp.task('sass', () => {
 		.pipe(reload({stream : true}));
 });
 
-//==== TODO task for recieve data from content.json without restart gupl
+//==== TODO task for recieve data from content.json without restart gulp
 
 gulp.task('pug', () => {
 	var locals;
