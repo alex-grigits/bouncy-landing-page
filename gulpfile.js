@@ -12,7 +12,8 @@ const gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	cssunit = require('gulp-css-unit'),
 	del = require('del'),
-	data = require('gulp-data');
+	data = require('gulp-data'),
+	path = require('path');
 
 // server
 gulp.task('server', function() {
@@ -53,11 +54,11 @@ gulp.task('pug', () => {
 	var locals;
 	gulp.src('src/blocks/*.pug')
 		.pipe(plumber())
-		// .pipe(data(function() {
-		// 	return JSON.parse(fs.readFileSync('./content.json', 'utf8'));
-		// }))
+		.pipe(data(function(file) {
+			return JSON.parse(fs.readFileSync('./data/' + path.basename(file.path) + '.json'));
+		}))
 		.pipe(pug({
-			locals: JSON.parse(fs.readFileSync('./content.json', 'utf8')),
+			// locals: JSON.parse(fs.readFileSync('./content.json', 'utf8')),
 			pretty: '	'
 		}))
 		.pipe(gulp.dest('dist'))
