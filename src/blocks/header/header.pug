@@ -3,18 +3,19 @@ include ../top-menu/top-menu
 +b.HEADER.header(style="background-image: url(../img/header-bg.jpg)")
 	+e.top-line
 		+b.logo.header__logo
-			+e.SPAN.text Bouncy
-		+top-menu({
-			"menu": [
-				{ "name": "Hello", "src": "#", "active": true },
-				{ "name": "About", "src": "#", "active": false },
-				{ "name": "Services", "src": "#", "active": false },
-				{ "name": "Portfolio", "src": "#", "active": false },
-				{ "name": "Team", "src": "#", "active": false },
-				{ "name": "Blog", "src": "#", "active": false },
-				{ "name": "Contact", "src": "#", "active": false }
-			]
-		})
+			+e.SPAN.text= title
+		+top-menu(menu)
+		//- +top-menu({
+		//- 	"menu": [
+		//- 		{ "name": "Hello", "src": "#", "active": true },
+		//- 		{ "name": "About", "src": "#", "active": false },
+		//- 		{ "name": "Services", "src": "#", "active": false },
+		//- 		{ "name": "Portfolio", "src": "#", "active": false },
+		//- 		{ "name": "Team", "src": "#", "active": false },
+		//- 		{ "name": "Blog", "src": "#", "active": false },
+		//- 		{ "name": "Contact", "src": "#", "active": false }
+		//- 	]
+		//- })
 
 	+b.hero.header__hero
 		+e.H1.title We Are Code Cafe

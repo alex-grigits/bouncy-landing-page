@@ -48,17 +48,13 @@ gulp.task('sass', () => {
 		.pipe(reload({stream : true}));
 });
 
-//==== TODO task for recieve data from content.json without restart gulp
-
 gulp.task('pug', () => {
-	var locals;
 	gulp.src('src/blocks/*.pug')
 		.pipe(plumber())
 		.pipe(data(function(file) {
-			return JSON.parse(fs.readFileSync('./data/' + path.basename(file.path) + '.json'));
+			return JSON.parse(fs.readFileSync('./data/content.json'));
 		}))
 		.pipe(pug({
-			// locals: JSON.parse(fs.readFileSync('./content.json', 'utf8')),
 			pretty: '	'
 		}))
 		.pipe(gulp.dest('dist'))

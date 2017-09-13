@@ -1,6 +1,6 @@
 mixin top-menu(data)
 	+b.NAV.top-menu.header__menu
-		each item in data.menu
+		each item in data
 			if(item.active)
 				+e.A.item.--active(href=item.src)= item.name
 			else

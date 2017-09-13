@@ -1,3 +1,40 @@
 {
-	"title": "Bouncy"
+	"title": "Bouncy",
+	"menu": [
+		{
+			"name": "Hello",
+			"link": "#",
+			"active": true
+		},
+		{
+			"name": "About",
+			"link": "#",
+			"active": false
+		},
+		{
+			"name": "Services",
+			"link": "#",
+			"active": false
+		},
+		{
+			"name": "Portfolio",
+			"link": "#",
+			"active": false
+		},
+		{
+			"name": "Team",
+			"link": "#",
+			"active": false
+		},
+		{
+			"name": "Blog",
+			"link": "#",
+			"active": false
+		},
+		{
+			"name": "Contact",
+			"link": "#",
+			"active": false
+		}
+	]
 }
