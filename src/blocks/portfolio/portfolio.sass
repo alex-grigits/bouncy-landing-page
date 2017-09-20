@@ -49,6 +49,8 @@
 		background-color: #ccc
 		background-repeat: no-repeat;
 		background-size: cover;
+		display: none
+		position: relative
 		&--1
 			grid-column: 1
 			grid-row: 1 / 8
@@ -97,25 +99,44 @@
 			grid-column: 4
 			grid-row: 14 / 20
 			background-image: url('../../img/gallery/4-3.jpg')
+		&:hover .overlay-desc
+			height: 100%
 
-/* gallery with css columns */
 
-// .gallery
-// 	margin-top: 60px
-// 	column-count: 4
-// 	column-width: 270px
-// 	font-size: 0
-// 	&__item
-// 		display: inline-block
-// 		margin: 5px
-// 		width:  100%
-// 		background:  #ccc
+.overlay-desc
+	display: flex
+	flex-flow: column nowrap
+	justify-content: space-between
+	position: absolute
+	padding: 0 35px
+	bottom: 0
+	left: 0
+	right: 0;
+	background-color: #000
+	overflow: hidden
+	width: 100%
+	height: 0
+	transition: .3s ease
+	opacity: .8
+	&__title
+		margin: 40px 0
+		text-transform: uppercase
+		font-size: 20px
+		color: $color-topaz
+		position: relative
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			left: 0
+			bottom: -15px
+			width: 23px
+			height: 1px
+			background-color: $color-topaz
+	&__text
+		margin-bottom: auto
 
-// 		&--size-250
-// 			height: 250px
-// 		&--size-300
-// 			height: 300px
-// 		&--size-350
-// 			height: 350px
-// 		&--size-400
-// 			height: 400px
+
+.show
+	display: block
+

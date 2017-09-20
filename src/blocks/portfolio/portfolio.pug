@@ -3,25 +3,61 @@
 		+e.H2.title The portfolio
 		+e.P.subtitle At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 		+b.tabs
-			+e.BUTTON.tablink.tabs__tablink--active All works
-			+e.BUTTON.tablink Print
-			+e.BUTTON.tablink Identity
-			+e.BUTTON.tablink Branding
-			+e.BUTTON.tablink Web
-			+e.BUTTON.tablink HTML
-			+e.BUTTON.tablink Wordpress
+			+e.BUTTON.tablink.tabs__tablink--active(onclick="filterSelection(event, 'all')") All works
+			+e.BUTTON.tablink(onclick="filterSelection(event, 'print')") Print
+			+e.BUTTON.tablink(onclick="filterSelection(event, 'identity')") Identity
+			+e.BUTTON.tablink(onclick="filterSelection(event, 'branding')") Branding
+			+e.BUTTON.tablink(onclick="filterSelection(event, 'web')") Web
+			+e.BUTTON.tablink(onclick="filterSelection(event, 'html')") HTML
+			+e.BUTTON.tablink(onclick="filterSelection(event, 'wp')") Wordpress
 		+b.gallery
-			+e.item.gallery__item--1
-			+e.item.gallery__item--2
-			+e.item.gallery__item--3
-			+e.item.gallery__item--4
-			+e.item.gallery__item--5
-			+e.item.gallery__item--6
-			+e.item.gallery__item--7
-			+e.item.gallery__item--8
-			+e.item.gallery__item--9
-			+e.item.gallery__item--10
-			+e.item.gallery__item--11
-			+e.item.gallery__item--12
+			+e.item.gallery__item--1.print
+				+b.overlay-desc
+					+e.H4.title Title here
+					+e.P.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Et soluta quae facilis ratione
+			+e.item.gallery__item--2.identity
+				+b.overlay-desc
+					+e.H4.title Title here
+					+e.P.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Et soluta quae facilis ratione
+			+e.item.gallery__item--3.branding
+				+b.overlay-desc
+					+e.H4.title Title here
+					+e.P.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Et soluta quae facilis ratione
+			+e.item.gallery__item--4.web
+				+b.overlay-desc
+					+e.H4.title Title here
+					+e.P.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Et soluta quae facilis ratione
+			+e.item.gallery__item--5.html
+				+b.overlay-desc
+					+e.H4.title Title here
+					+e.P.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Et soluta quae facilis ratione
+			+e.item.gallery__item--6.wp
+				+b.overlay-desc
+					+e.H4.title Title here
+					+e.P.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Et soluta quae facilis ratione
+			+e.item.gallery__item--7.branding
+				+b.overlay-desc
+					+e.H4.title Title here
+					+e.P.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Et soluta quae facilis ratione
+			+e.item.gallery__item--8.print
+				+b.overlay-desc
+					+e.H4.title Title here
+					+e.P.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Et soluta quae facilis ratione
+			+e.item.gallery__item--9.html
+				+b.overlay-desc
+					+e.H4.title Title here
+					+e.P.text Lorem ipsum dolor sit amet consectetur adipisicing elit
+			+e.item.gallery__item--10.print
+				+b.overlay-desc
+					+e.H4.title Title here
+					+e.P.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Et soluta quae facilis ratione
+			+e.item.gallery__item--11.identity
+				+b.overlay-desc
+					+e.H4.title Title here
+					+e.P.text Lorem ipsum dolor sit amet consectetur adipisicing elit
+			+e.item.gallery__item--12.web
+				+b.overlay-desc
+					+e.H4.title Title here
+					+e.P.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Et soluta quae facilis ratione
 
 

@@ -13,7 +13,8 @@ const gulp = require('gulp'),
 	cssunit = require('gulp-css-unit'),
 	del = require('del'),
 	data = require('gulp-data'),
-	path = require('path');
+	path = require('path'),
+	concat = require('gulp-concat');
 
 // server
 gulp.task('server', function() {
@@ -48,6 +49,7 @@ gulp.task('sass', () => {
 		.pipe(reload({stream : true}));
 });
 
+// task for pug files
 gulp.task('pug', () => {
 	gulp.src('src/blocks/*.pug')
 		.pipe(plumber())
@@ -59,6 +61,13 @@ gulp.task('pug', () => {
 		}))
 		.pipe(gulp.dest('dist'))
 		.pipe(reload({stream : true}));
+});
+
+// task for js files
+gulp.task('js', () => {
+	gulp.src('./src/blocks/*/**.js')
+		.pipe(concat('main.js', {newLine: ';'}))
+		.pipe(gulp.dest('dist'));
 });
 
 
@@ -95,10 +104,10 @@ gulp.task('removedist', function() { return del.sync('dist'); });
 
 gulp.task('watch', () => {
 	gulp.watch('src/**/*.pug', ['pug']);
-
+	gulp.watch('src/**/*.js', ['js']);
 	gulp.watch('src/**/*.+(scss|sass)', ['sass']);
 });
 
 gulp.task('default',
-	['removedist', 'fontsBuild', 'imgBuild', 'sass', 'pug', 'sprite', 'server', 'watch']
+	['removedist', 'fontsBuild', 'imgBuild', 'sass', 'pug', 'js', 'sprite', 'server', 'watch']
 );
