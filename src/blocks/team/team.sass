@@ -1,0 +1,131 @@
+.team
+	&__container
+		max-width: 1030px
+		margin: 0 auto
+		padding: 80px 0
+		display: flex
+		flex-flow: column nowrap
+		align-items: center
+	&__subtitle
+		width: 50%
+		text-align: center
+		margin: 30px auto 55px
+
+.team-slideshow
+	width: 100%
+	display: none
+	justify-content: space-between
+
+.crewman
+	width: 50%
+	text-align: right
+	padding: 25px 45px
+	&__name
+		font-size: 20px
+	&__position
+		padding: 10px 0
+		text-transform: uppercase
+		font-family: $font-heading
+		font-style: italic
+		font-size: 14px
+	&__desc
+		padding: 15px 0
+		line-height: 1.6
+
+.crewman__skills-container
+	padding: 15px 0 15px 80px
+
+
+.crewman-skill
+	&:after
+		content: " "
+		display: table
+		clear: both
+	&__item
+		text-transform: uppercase
+		letter-spacing: 1px
+		float: left
+	&__rate
+		float: right
+
+
+.skill-bar
+	width: 100%
+	height: 4px
+	background: $color-gray-bg
+	&__line
+		height: 4px
+		background: $color-topaz
+		&--brand
+			width: 80%
+		&--web
+			width: 65%
+		&--ui
+			width: 75%
+
+.dots
+	margin-top: 60px
+	display: flex
+	justify-content: center
+	&__dot
+		height: 10px
+		width: 10px
+		margin: 0 5px
+		border: 1px solid $color-topaz
+		border-radius: 50%
+		cursor: pointer
+		&--active, &:hover
+			background-color: $color-topaz
+
+/* Fading animation */
+.fade
+	-webkit-animation-name: fade
+	-webkit-animation-duration: 1.5s
+	animation-name: fade
+	animation-duration: 1.5s
+
+@-webkit-keyframes fade
+	from {opacity: .4}
+	to {opacity: 1}
+
+
+@keyframes fade
+	from {opacity: .4}
+	to {opacity: 1}
+
+.contact-us
+	width: 100%
+	padding: 50px 0
+	text-align: center
+	position: relative
+	z-index: 2
+	&__text
+		padding-bottom: 25px
+		font-family: $font-main
+		font-size: 20px
+		font-weight: 300
+		color: $color-white
+		z-index: 5
+	&__btn
+		background-color: transparent
+		padding: 10px 30px
+		border: 1px solid $color-white
+		border-radius: 37px
+		cursor: pointer
+		font-size: 16px
+		font-family: $font-main
+		font-weight: 300
+		color: $color-white
+		line-height: 16px
+		outline: none
+		z-index: 6
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: #000
+		opacity: .85
+		z-index: -1

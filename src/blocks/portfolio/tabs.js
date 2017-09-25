@@ -1,8 +1,10 @@
 filterSelection(event, "all");
+
 function filterSelection(e, c) {
-	var x, i;
-	var items = document.getElementsByClassName("gallery__item");
-	var gallery = document.querySelector('.gallery');
+    'use strict';
+	var x, i,
+		items = document.getElementsByClassName("gallery__item"),
+		gallery = document.querySelector('.gallery');
 
 	if (c == "all") c = "";
 	// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
@@ -42,6 +44,9 @@ function removeClass(element, name) {
 function addActive(event, tabName) {
 
 	// Get all elements with class="tablinks" and remove the class "active"
+	var gallery = document.querySelector('.gallery');
+	console.log(gallery.classList);
+
 	var tablinks = document.getElementsByClassName("tabs__tablink");
 	for (i = 0; i < tablinks.length; i++) {
 		tablinks[i].className = tablinks[i].className.replace(" tabs__tablink--active", "");

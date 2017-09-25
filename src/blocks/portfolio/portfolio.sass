@@ -6,7 +6,7 @@
 		align-items: center
 		width: 1170px
 		margin: 0 auto
-		padding: 80px 30px 140px
+		padding: 80px 30px 100px
 	&__subtitle
 		text-align: center
 		width: 460px
@@ -136,7 +136,45 @@
 	&__text
 		margin-bottom: auto
 
-
 .show
 	display: block
 
+.portfolio__start
+	margin-top: 40px
+
+.start
+	width: 100%
+	padding: 50px 0
+	text-align: center
+	position: relative
+	z-index: 2
+	&__text
+		padding-bottom: 25px
+		font-family: $font-main
+		font-size: 20px
+		font-weight: 300
+		color: $color-white
+		z-index: 5
+	&__btn
+		background-color: transparent
+		padding: 10px 30px
+		border: 1px solid $color-white
+		border-radius: 37px
+		cursor: pointer
+		font-size: 16px
+		font-family: $font-main
+		font-weight: 300
+		color: $color-white
+		line-height: 16px
+		outline: none
+		z-index: 6
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: $color-topaz
+		opacity: .75
+		z-index: -1

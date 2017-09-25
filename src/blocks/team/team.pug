@@ -1,0 +1,90 @@
++b.team
+	+e.container
+		+e.H2.title The team
+		+e.P.subtitle At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+		//- First slide
+		+b.team-slideshow.fade
+			+e.IMG.img(src="../../img/team/man.jpg")
+			+b.crewman
+				+e.name Abdulah Noman
+				+e.position Creative director, Code Cafe
+				+e.desc Lorem ipsum dolor sit amet consectetur adipisicing elit eius veritatis quo
+				+e.skills-container
+					+b.crewman-skill
+						+e.P.item Branding
+						+e.P.rate 80 %
+					+b.skill-bar
+						+e.line.skill-bar__line--brand
+				+e.skills-container
+					+b.crewman-skill
+						+e.P.item Web Design
+						+e.P.rate 65 %
+					+b.skill-bar
+						+e.line.skill-bar__line--web
+				+e.skills-container
+					+b.crewman-skill
+						+e.P.item User Interface
+						+e.P.rate 75 %
+					+b.skill-bar
+						+e.line.skill-bar__line--ui
+		//- Second slide
+		+b.team-slideshow.fade
+			+e.IMG.img(src="../../img/team/man2.jpg")
+			+b.crewman
+				+e.name Jack Sparrow
+				+e.position Non-creative director, Code Cafe
+				+e.desc Lorem ipsum dolor sit amet consectetur adipisicing elit eius veritatis quo
+				+e.skills-container
+					+b.crewman-skill
+						+e.P.item Branding
+						+e.P.rate 80 %
+					+b.skill-bar
+						+e.line.skill-bar__line--brand
+				+e.skills-container
+					+b.crewman-skill
+						+e.P.item Web Design
+						+e.P.rate 65 %
+					+b.skill-bar
+						+e.line.skill-bar__line--web
+				+e.skills-container
+					+b.crewman-skill
+						+e.P.item User Interface
+						+e.P.rate 75 %
+					+b.skill-bar
+						+e.line.skill-bar__line--ui
+
+		//- Third slide
+		+b.team-slideshow.fade
+			+e.IMG.img(src="../../img/team/man3.jpg")
+			+b.crewman
+				+e.name John Connor
+				+e.position Second director, Code Cafe
+				+e.desc Lorem ipsum dolor sit amet consectetur adipisicing elit eius veritatis quo
+				+e.skills-container
+					+b.crewman-skill
+						+e.P.item Branding
+						+e.P.rate 80 %
+					+b.skill-bar
+						+e.line.skill-bar__line--brand
+				+e.skills-container
+					+b.crewman-skill
+						+e.P.item Web Design
+						+e.P.rate 65 %
+					+b.skill-bar
+						+e.line.skill-bar__line--web
+				+e.skills-container
+					+b.crewman-skill
+						+e.P.item User Interface
+						+e.P.rate 75 %
+					+b.skill-bar
+						+e.line.skill-bar__line--ui
+		//- Slide's indicators
+		+b.dots
+			+e.dot(onclick="currentSlide(1)")
+			+e.dot(onclick="currentSlide(2)")
+			+e.dot(onclick="currentSlide(3)")
+
+	+b.contact-us(style="background: url('../../img/team/bg.png') no-repeat; background-position: center")
+			+e.P.text
+				| Already Loved Us? Let's Talk!
+			+e.BUTTON.btn Contact Us
