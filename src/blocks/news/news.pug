@@ -1,0 +1,34 @@
++b.news(style="background: url('../../img/news/news-bg.png') no-repeat; background-position: center")
+	+e.container
+		+e.H2.title Latest news
+		+e.P.subtitle
+			| Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque tempore quasi laboriosam
+		+e.slides
+			//- First news
+			+b.news-slide
+				+e.H3.title The trending Landing Pages
+				+e.P.author by #[span.accent-text Kabir Uddin]
+				+e.P.stats 6950 Likes - 243 Comments - 703 Shares
+				+e.P.text
+					| Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus delectus, alias dolorem quibusdam porro eaque omnis et aperiam nostrum rerum laborum recusandae, vero doloribus at ab similique maxime deserunt quo. Autem explicabo fuga enim adipisci obcaecati. Quidem illo obcaecati cumque minus facilis unde nihil ratione. Voluptatibus id dolore dolor soluta?
+				+e.A.read-more(href="#") + Read More
+			//- Second news
+			+b.news-slide
+				+e.H3.title The best song by Gary
+				+e.P.author by #[span.accent-text Gary Moore]
+				+e.P.stats 45650 Likes - 547 Comments - 2340 Shares
+				+e.P.text
+					| Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolor obcaecati minima itaque quod ullam nulla sint velit eveniet deleniti enim, excepturi saepe vel, minus veniam quo ut ea rerum laudantium voluptate. Ipsam architecto corporis ducimus. Ratione vel molestiae labore consequuntur explicabo laboriosam vero. Sequi provident laudantium beatae alias fugiat!
+				+e.A.read-more(href="#") + Read More
+			//- Third news
+			+b.news-slide
+				+e.H3.title Webpack Rules
+				+e.P.author by #[span.accent-text Jason Wood]
+				+e.P.stats 9000 Likes - 456 Comments - 239 Shares
+				+e.P.text
+					| Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, et deleniti exercitationem quam expedita non molestias dolorum nemo ab cum laudantium quidem earum dignissimos odio soluta dolore nisi odit, inventore nesciunt, optio hic cumque obcaecati rerum? Minima voluptates ipsa, dolores id incidunt nemo cum nisi sit sint ex asperiores eum?
+				+e.A.read-more(href="#") + Read More
+			+b.news-slide-indicators
+				+e.dot(onclick="currentSlide3(1)")
+				+e.dot(onclick="currentSlide3(2)")
+				+e.dot(onclick="currentSlide3(3)")
