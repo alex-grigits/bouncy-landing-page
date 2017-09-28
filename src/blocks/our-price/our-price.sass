@@ -1,0 +1,86 @@
+.price
+	background-color: #f3f3f3
+	&__container
+		max-width: 1170px
+		margin: 0 auto
+		padding: 80px 0
+		display: flex
+		flex-flow: column nowrap
+		align-items: center
+	&__subtitle
+		width: 50%
+		text-align: center
+		margin: 30px auto 55px
+
+.plans
+	max-width: 835px
+	display: flex
+	flex-flow: row nowrap
+
+.plan-card
+	position: relative
+	margin: 0 30px
+	display: flex
+	flex-flow: column nowrap
+	background-color: $color-white
+	box-shadow: 0 0 1px #ccc
+	&__title
+		padding: 20px 60px
+		background-color: $color-topaz
+		color: $color-white
+		text-align: center
+		text-transform: uppercase
+		font-size: 20px
+		font-weight: bold
+
+.plan-cost
+	padding: 60px 0 100px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	text-align: center
+	&__price
+		padding: 5px
+		font-size: 42px
+	&__period
+		padding: 5px
+		font-size: 20px
+
+.plan-card__overlay
+	height: 0
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	top: 0
+	overflow: hidden
+	transition: height .2s ease
+
+.plan-desc
+	background-color: $color-white
+	&__btn
+		display: none
+		padding: 20px 60px
+		background-color: $color-topaz
+		color: $color-white
+		text-align: center
+		font-size: 16px
+		text-decoration: none
+
+.desc-list
+	padding: 32px
+	&__item
+		padding: 7px 0
+
+.plan-card:hover .plan-card__overlay
+	height: 100%
+
+.plan-card:hover .plan-desc
+	display: flex
+	flex-direction: column
+	height: 100%
+	&__btn
+		display: block
+		margin-top: auto
+
+
