@@ -1,0 +1,52 @@
+.subscribe
+	padding: 75px 0 100px
+	z-index: 1
+	position: relative
+	&__container
+		max-width: 1170px
+		margin: 0 auto
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	&__title
+		padding-bottom: 20px
+		color: $color-white
+	&__subtitle
+		margin-bottom: 50px
+		padding: 10px 0
+		width: 50%
+		color: $color-steel
+		text-align: center
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: #000
+		opacity: .75
+		z-index: -1
+
+.subscribe-form
+	display: flex
+	flex-direction: row
+	width: 50%
+	&__text-input
+		flex: 2
+		padding: 14px 22px
+		margin-right: 10px
+		background-color: transparent
+		color: $color-white
+		border: 1px solid $color-steel
+		outline-color: $color-white
+		&::placeholder
+			font-size: 14px
+			color: #cfd3d4
+	&__submit
+		padding: 0 50px
+		border: none
+		text-transform: uppercase
+		background-color: $color-topaz
+		color: $color-white
