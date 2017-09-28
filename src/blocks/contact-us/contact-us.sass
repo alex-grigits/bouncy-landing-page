@@ -1,0 +1,89 @@
+.contact-section
+	background-color: #f3f3f3
+	text-align: center
+	&__container
+		max-width: 940px
+		margin: 0 auto
+		padding: 80px 0
+		display: flex
+		flex-flow: column nowrap
+	&__subtitle
+		width: 50%
+		margin: 30px auto 55px
+	&__contacts
+		display: flex
+		flex-flow: row nowrap
+		justify-content: space-between
+
+.contact-card
+	width: 290px
+	display: flex
+	flex-direction: column
+	background-color: $color-white
+	box-shadow: 0 0 1px 0 #ccc
+	&__img
+		width: 100%
+		align-self: center
+		font-size: 40px
+		color: $color-white
+		position: relative
+		z-index: 1
+	.fa
+		position: absolute
+		bottom: 50%
+		right: 50%
+		transform: translate(50%, 50%)
+		z-index: 5
+
+	&-info
+		padding: 20px 0
+		display: flex
+		flex-direction: column
+		text-align: center
+		text-transform: uppercase
+		&__title
+			padding: 0 0 20px
+			color: $color-greyish-brown
+			font-size: 16px
+		&__address
+			line-height: 20px
+			color: $color-steel
+			font-size: 14px
+
+.contact-form
+	&__container
+		max-width: 940px
+		margin: 0 auto
+		padding: 80px 0
+		display: flex
+		flex-direction: column
+	&__btn
+		padding: 20px 0
+		border: none
+		text-transform: uppercase
+		background-color: $color-topaz
+		color: $color-white
+
+.contact-form-row
+	display: flex
+	justify-content: space-between
+	&__input
+		flex: 0 1 30%
+		padding: 14px 22px
+		margin-bottom: 30px
+		color: $color-steel
+		border: 1px solid #D8DCE0
+	&__input-text
+		flex: 1
+		padding: 14px 22px
+		margin-bottom: 30px
+		color: $color-steel
+		font-size: 14px
+		line-height: 20px
+		border: 1px solid #D8DCE0
+
+// TODO: create for all browsers
+.contact-form-row__input
+	&::placeholder
+		font-size: 14px
+		color: #cfd3d4

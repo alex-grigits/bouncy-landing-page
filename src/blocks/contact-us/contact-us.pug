@@ -1,0 +1,38 @@
++b.contact-section
+	+e.container
+		+e.H2.title Contact Us
+		+e.P.subtitle Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
+		+e.contacts
+			+b.contact-card
+				+e.img
+					img(src='../../img/contact-us/contact-us-email.png')
+					i.fa.fa-envelope-o
+				+b.contact-card-info
+					+e.H4.title Email
+					+e.P.address hello@codecafe.com
+					+e.P.address personal@codecafe.com
+			+b.contact-card
+				+e.img
+					img(src="../../img/contact-us/contact-us-office.png")
+					i.fa.fa-map-marker
+				+b.contact-card-info
+					+e.H4.title Our Office
+					+e.P.address 240 Bhatikhana, 8200 Barisal Bangladesh
+			+b.contact-card
+				+e.img
+					img(src="../../img/contact-us/contact-us-phone.png")
+					i.fa.fa-phone
+				+b.contact-card-info
+					+e.H4.title Phone
+					+e.P.address +38 000 111-22-33
+					+e.P.address +38 000 222-33-44
+
++b.contact-form
+	+e.container
+		+b.contact-form-row
+			+e.INPUT.input(type="text" placeholder="Your name")
+			+e.INPUT.input(type="text" placeholder="Email address")
+			+e.INPUT.input(type="text" placeholder="Subject")
+		+b.contact-form-row
+			+e.TEXTAREA.input-text(rows="8")
+		+e.BUTTON.btn Submit Now
